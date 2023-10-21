@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Board</h1>
+        <button class="primary" onclick="openModal()">Nova Tarefa</button>
+    </div>
+    <div class="container" id="todoColumn">
+        <div class="column">
+            <div class="head">
+                <span>Tarefas</span>
+            </div>
+            <div class="body"></div>
+        </div>
+    </div>
+
+    <div id="modal">
+        <div class="box">
+            <div class="head">
+                <span id="creationModeTitle">Nova tarefa</span>
+                <span id="editingModeTitle">Editar tarefa</span>
+                <button onclick="closeModal()">x</button>
+            </div>
+            <div class="form">
+                <input type="hidden" id="idInput">
+
+                <div class="form-group">
+                    <label for="description">Descrição</label>
+                    <textarea name="description" id="description" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Prioridade</label>
+                    <select id="priority">
+                        <option>Baixa</option>
+                        <option>Média</option>
+                        <option>Alta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="deadLine">Prazo</label>
+                    <input type="date" id="deadLine">
+                </div>
+
+                <button class="primary create" id="creationModeBtn" onclick="createTask()">Cadastrar</button>
+                <button class="primary edit" id="editingModeBtn" onclick="updateTask()">Salvar alterações</button>
+                <button class="delete" id="deleteModeBtn" onclick="deleteTask()">Excluir Tarefa</button>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/tasks.js"></script>
+    <script src="./assets/js/moment.min.js"></script>
+   
+ 
+</body>
+
+</html>

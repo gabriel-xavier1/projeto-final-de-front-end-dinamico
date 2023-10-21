@@ -1,0 +1,41 @@
+/* Estilo base do card */
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+}
+
+/* Título do card */
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para os inputs de texto */
+.card input[type="text"],
+.card input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para o botão */
+.card button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para o botão ao passar o mouse */
+.card button:hover {
+    background-color: #0056b3;
+}
