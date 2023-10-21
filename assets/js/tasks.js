@@ -12,12 +12,17 @@ const creationModeBtn = document.getElementById("creationModeBtn");
 const editingModeBtn = document.getElementById("editingModeBtn");
 const deleteModeBtn = document.getElementById('deleteModeBtn');
 
+
 let todoList = [];
 
-if (localStorage.getItem('todoList')) {
-  todoList = JSON.parse(localStorage.getItem('todoList'));
-  generateCards();
-}
+document.addEventListener('DOMContentLoaded', function() {
+  if (localStorage.getItem('todoList')) {
+    todoList = JSON.parse(localStorage.getItem('todoList'));
+    generateCards();
+  }
+});
+
+
 
 function openModal(id) {
   modal.style.display = "flex";
@@ -65,7 +70,7 @@ function generateCards() {
     <div class='card' ondblclick='openModal(${task.id})'> 
         <div class='info '>
             <b>Descrição:</b>
-            <span>${task.description}</span>
+            <p>${task.description}</p>
         </div>
 
         <div class='info'>
